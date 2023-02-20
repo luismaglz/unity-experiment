@@ -17,20 +17,19 @@ public class SteveController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movementController = new MovementController(this, m_MovementSmoothing, rigidBody2D, statusController);
+        movementController = new MovementController();
         animationController = new AnimationController(this, animator, statusController);
     }
 
     // Update is called once per frame
     void Update()
     {
-        positionController.Update();
         animationController.Update();
     }
 
     private void FixedUpdate()
     {
-        movementController.FixedUpdate();
+        //movementController.FixedUpdate();
     }
 }
 
